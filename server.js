@@ -5,6 +5,7 @@ const db = require('./database');
 const database = require('./storage/db');
 const encode = require('./encode');
 const path = require("path");
+const link = require("url");
 
 site.use(bp.urlencoded({extended: false}));
 
@@ -26,8 +27,10 @@ site.get('/:info', async (req,res)=>{
 
 site.set('view engine','ejs');
 
+site.set('views', path.join(__dirname, 'views'));
+
 site.get('/', (req,res) => {
-    res.render('index');
+    res.render('index',{});
 })
 
 site.post('/', async (req,res) =>{
