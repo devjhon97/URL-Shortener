@@ -27,7 +27,7 @@ site.get('/:info', async (req,res)=>{
 
 site.set('view engine','ejs');
 
-site.set('views', path.join(__dirname, 'views'));
+site.set('/views', path.join(__dirname, "views"));
 
 site.get('/', (req,res) => {
     res.render('index',{});
