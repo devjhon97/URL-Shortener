@@ -51,4 +51,4 @@ site.post('/', async (req,res) =>{
     res.render('result',{shorturl});
 })
 
-site.listen(5000);
+site.listen();
