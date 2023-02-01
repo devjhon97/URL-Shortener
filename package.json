@@ -2,9 +2,10 @@
   "name": "url-shortener",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ejs",
+  "main": "index.html",
   "scripts": {
-    "dstart": "nodemon server.js"
+    "dstart": "nodemon server.js",
+    "now": "now --prod"
   },
   "author": "",
   "license": "ISC",
