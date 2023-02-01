@@ -1,9 +1,9 @@
 const express = require("express");
 const site = express();
 const bp = require('body-parser');
-const db = require('../../database');
-const database = require('../../storage/db');
-const encode = require('../../encode');
+const db = require('./database');
+const database = require('./storage/db');
+const encode = require('./encode');
 const path = require("path");
 const link = require("url");
 
