@@ -1,8 +1,8 @@
 # URL-Shortener
-# Back-End of URL-Shortener project
-#
+Back-End of URL-Shortener project
+
 # Languagues and Frameworks used:
-# - Java ☕
-# - Maven 🪶
-# - SpringBoot 🍃
-# - MySQL 💾
+- Java ☕
+- Maven 🪶
+- SpringBoot 🍃
+- MySQL 💾
