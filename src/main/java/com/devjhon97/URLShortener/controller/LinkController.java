@@ -7,6 +7,7 @@ import com.devjhon97.URLShortener.service.LinkService;
 
 import jakarta.servlet.http.HttpServletRequest;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpHeaders;
@@ -29,13 +30,13 @@ public class LinkController {
     private LinkService linkService;
 
     @PostMapping("/short-link")
-    public ResponseEntity<ResponseDTO> create(@RequestBody RequestDTO request,
+    public ResponseEntity<ResponseDTO> create(@RequestBody @Valid RequestDTO request,
                                               HttpServletRequest servletRequest) {
 
         String shortURL = linkService.createShortURL(request.url());
         String url = servletRequest.getRequestURL().toString().replace("short-link", shortURL);
 
-        return ResponseEntity.ok(new ResponseDTO(url));
+        return new ResponseEntity<>(new ResponseDTO(url), HttpStatus.CREATED);
     }
 
     @GetMapping("/{code}")
